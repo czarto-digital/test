@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220">
+  <defs>
+    <linearGradient id="tBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1615"/>
+      <stop offset="100%" stop-color="#192c2a"/>
+    </linearGradient>
+    <linearGradient id="tBarA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60d4bc"/>
+      <stop offset="100%" stop-color="#2dc4a0"/>
+    </linearGradient>
+    <linearGradient id="tBarB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2dc4a0"/>
+      <stop offset="100%" stop-color="#1e9b7d"/>
+    </linearGradient>
+    <linearGradient id="tAmber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4b47e"/>
+      <stop offset="100%" stop-color="#c49a5e"/>
+    </linearGradient>
+    <radialGradient id="tGlow" cx="65%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#2dc4a0" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#2dc4a0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tBlur"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+
+  <rect width="480" height="220" fill="url(#tBg)"/>
+  <ellipse cx="310" cy="100" rx="180" ry="110" fill="url(#tGlow)" filter="url(#tBlur)"/>
+
+  <!-- Dividing line A | B -->
+  <line x1="240" y1="15" x2="240" y2="215" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="5 5"/>
+
+  <!-- ── SIDE A ────────────────────────────────────── -->
+  <!-- "A" label -->
+  <text x="85" y="48" font-family="'DM Serif Display', Georgia, serif" font-size="52" font-style="italic" fill="rgba(255,255,255,0.06)" text-anchor="middle">A</text>
+  <text x="85" y="48" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.25)" text-anchor="middle">A</text>
+
+  <!-- Bar chart A – baseline/control -->
+  <!-- Axis -->
+  <line x1="36" y1="185" x2="210" y2="185" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="36" y1="185" x2="36" y2="65" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Bars A (lower conversion) -->
+  <rect x="52"  y="145" width="24" height="40" rx="3" fill="url(#tBarA)" opacity="0.4"/>
+  <rect x="86"  y="130" width="24" height="55" rx="3" fill="url(#tBarA)" opacity="0.4"/>
+  <rect x="120" y="118" width="24" height="67" rx="3" fill="url(#tBarA)" opacity="0.4"/>
+  <rect x="154" y="125" width="24" height="60" rx="3" fill="url(#tBarA)" opacity="0.4"/>
+  <rect x="188" y="135" width="24" height="50" rx="3" fill="url(#tBarA)" opacity="0.4"/>
+
+  <!-- Trend line A -->
+  <polyline points="64,145 98,130 132,120 166,126 200,136" fill="none" stroke="#60d4bc" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+
+  <!-- Conversion rate A -->
+  <text x="120" y="105" font-family="'Inter',sans-serif" font-size="11" fill="rgba(255,255,255,0.25)" text-anchor="middle">2.4% CVR</text>
+
+  <!-- ── SIDE B ────────────────────────────────────── -->
+  <!-- "B" label -->
+  <text x="355" y="48" font-family="'DM Serif Display', Georgia, serif" font-size="52" font-style="italic" fill="rgba(45,196,160,0.08)" text-anchor="middle">B</text>
+  <text x="355" y="48" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="rgba(45,196,160,0.6)" text-anchor="middle">B</text>
+
+  <!-- Axis B -->
+  <line x1="270" y1="185" x2="445" y2="185" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <line x1="270" y1="185" x2="270" y2="65" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Bars B (higher, winning variant) -->
+  <rect x="286" y="118" width="24" height="67" rx="3" fill="url(#tBarB)" opacity="0.75"/>
+  <rect x="320" y="95"  width="24" height="90" rx="3" fill="url(#tBarB)" opacity="0.85"/>
+  <rect x="354" y="80"  width="24" height="105" rx="3" fill="url(#tBarB)" opacity="0.9"/>
+  <rect x="388" y="88"  width="24" height="97" rx="3" fill="url(#tBarB)" opacity="0.85"/>
+  <rect x="420" y="78"  width="24" height="107" rx="3" fill="url(#tBarB)"/>
+
+  <!-- Trend line B -->
+  <polyline points="298,118 332,95 366,82 400,90 432,80" fill="none" stroke="#2dc4a0" stroke-width="2" opacity="0.8"/>
+
+  <!-- Conversion rate B + uplift badge -->
+  <rect x="311" y="58" width="90" height="22" rx="11" fill="rgba(45,196,160,0.15)" stroke="#2dc4a0" stroke-width="1"/>
+  <text x="355" y="73" font-family="'Inter',sans-serif" font-size="11" font-weight="600" fill="#60d4bc" text-anchor="middle">+38% ↑ CVR</text>
+
+  <!-- Up arrow B -->
+  <g transform="translate(432,56)" opacity="0.8">
+    <line x1="0" y1="20" x2="0" y2="0" stroke="#2dc4a0" stroke-width="2" stroke-linecap="round"/>
+    <polyline points="-5,7 0,0 5,7" fill="none" stroke="#2dc4a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Statistical significance badge bottom -->
+  <g transform="translate(240,195)">
+    <rect x="-55" y="-10" width="110" height="20" rx="10" fill="rgba(196,154,94,0.12)" stroke="rgba(196,154,94,0.3)" stroke-width="1"/>
+    <text x="0" y="4" font-family="'Inter',sans-serif" font-size="10" font-weight="600" fill="#d4b47e" text-anchor="middle">95% Signifikanz</text>
+  </g>
+</svg>

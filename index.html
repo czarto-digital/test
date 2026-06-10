@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="André Czartowski – UX-Consultant für Business Applications, Design, Experimentation & datengetriebene Optimierung. Hamburg." />
+  <title>UX/UI-Design | Czarto Digital | Hamburg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Theme per Wochentag – 0=So,1=Mo,2=Di,3=Mi,4=Do,5=Fr,6=Sa
+    // ?theme=<name> überschreibt für Tests
+    const THEMES = {
+      1: 'theme-light',   // Montag
+      // weitere Themes folgen
+    };
+    const param = new URLSearchParams(location.search).get('theme');
+    const theme = param ? 'theme-' + param : THEMES[new Date().getDay()];
+    if (theme) document.documentElement.classList.add(theme);
+  </script>
+</head>
+<body>
+  <!-- SVG-Gradient-Definition für alle Ringe -->
+  <svg class="ring-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#2dc4a0"/>
+        <stop offset="100%" stop-color="#60d4bc"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ─── Navigation ─────────────────────────────────────────────────── -->
+  <header class="nav-wrap" id="nav">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Czarto Digital">
+        <img src="logo.svg" alt="Czarto Digital" class="nav-logo-img nav-logo-img--dark" width="200" height="43" />
+        <img src="czarto_logo_2020_invert.svg" alt="Czarto Digital" class="nav-logo-img nav-logo-img--light" width="200" height="43" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#qualifikation" class="nav-link">Qualifikation</a></li>
+        <li><a href="#referenzen" class="nav-link">Referenzen</a></li>
+        <li><a href="#erfahrung" class="nav-link">Erfahrung</a></li>
+        <li><a href="#kontakt" class="nav-link nav-link--cta">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ─── Hero ───────────────────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img src="hero-bg.jpg" alt="" class="hero-photo" aria-hidden="true" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-eyebrow reveal">
+            <span class="dot"></span> Czarto Digital · Hamburg
+          </div>
+          <h1 class="hero-headline reveal reveal--delay-1">
+            UX&#8209;Consulting,<br>
+            <em>Experimentation</em><br>
+            &amp;&nbsp;CRO
+          </h1>
+          <p class="hero-sub reveal reveal--delay-2">
+            UX-Consultant für Business Applications &mdash;<br>
+            Design, Experimentation &amp; datengetriebene Optimierung
+          </p>
+          <div class="hero-actions reveal reveal--delay-3">
+            <a href="#kontakt" class="btn btn--primary">Projekt besprechen</a>
+            <a href="#qualifikation" class="btn btn--ghost">Mehr erfahren</a>
+          </div>
+          <div class="hero-meta reveal reveal--delay-4">
+            <a href="mailto:digital@czarto.de" class="meta-link">digital@czarto.de</a>
+            <span class="meta-sep">·</span>
+            <a href="tel:+4915758903333" class="meta-link">0157 58 90 3333</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ─── 01 Qualifikation ───────────────────────────────────────────── -->
+    <section class="section" id="qualifikation">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-num">01</span>
+          <h2 class="section-title">Qualifikation</h2>
+          <p class="section-desc">Tools, Methoden und Expertise – alles was für exzellente UX zählt.</p>
+        </div>
+
+        <!-- Software Skills -->
+        <div class="skills-block reveal">
+          <h3 class="block-label">Software</h3>
+          <div class="rings-grid">
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="100"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Figma</span>
+            </div>
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="100"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Adobe XD</span>
+            </div>
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="100"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Sketch</span>
+            </div>
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="100"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Miro</span>
+            </div>
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="85"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Jira</span>
+            </div>
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="85"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Confluence</span>
+            </div>
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="100"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Photoshop</span>
+            </div>
+
+            <div class="ring-item">
+              <div class="ring-wrap">
+                <svg class="ring-svg" viewBox="0 0 96 96" aria-hidden="true">
+                  <circle class="ring-track" cx="48" cy="48" r="40"/>
+                  <circle class="ring-fill" cx="48" cy="48" r="40" data-pct="100"/>
+                </svg>
+                <div class="ring-center"><span class="ring-pct">0%</span></div>
+              </div>
+              <span class="ring-name">Illustrator</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Expertise Cards -->
+        <div class="expertise-grid reveal">
+          <article class="expertise-card">
+            <div class="expertise-img-wrap">
+              <img src="img-research.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="img-research-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <div class="expertise-img-overlay"></div>
+              <h3 class="expertise-title">User-Research</h3>
+            </div>
+            <ul class="expertise-list">
+              <li>Usability &amp; UX-Testing</li>
+              <li>Surveys &amp; Interviews</li>
+              <li>Benchmarking</li>
+              <li>Workshop-Entwicklung</li>
+              <li>User Journeys &amp; Maps</li>
+              <li>Jobs to be Done (JTBD)</li>
+              <li>Motivation Mapping</li>
+            </ul>
+          </article>
+          <article class="expertise-card">
+            <div class="expertise-img-wrap">
+              <img src="img-design.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="img-design-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <div class="expertise-img-overlay"></div>
+              <h3 class="expertise-title">UX/UI Design</h3>
+            </div>
+            <ul class="expertise-list">
+              <li>Informationsarchitektur</li>
+              <li>Usability &amp; Experience</li>
+              <li>UI-Design</li>
+              <li>Design System-Entwicklung</li>
+              <li>Workshop-Facilitation</li>
+              <li>Experimentation</li>
+              <li>Conversion-Optimierung</li>
+            </ul>
+          </article>
+          <article class="expertise-card">
+            <div class="expertise-img-wrap">
+              <img src="img-prototyping.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="img-prototyping-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <div class="expertise-img-overlay"></div>
+              <h3 class="expertise-title">Prototyping</h3>
+            </div>
+            <ul class="expertise-list">
+              <li>Wireframing &amp; Lo-Fi</li>
+              <li>Interaktive Prototypen</li>
+              <li>Interaktionstiefen</li>
+              <li>Klickdummy-Erstellung</li>
+              <li>Annotations &amp; Specs</li>
+              <li>Dev-Handoff</li>
+              <li>Testszenario-Entwicklung</li>
+            </ul>
+          </article>
+          <article class="expertise-card">
+            <div class="expertise-img-wrap">
+              <img src="img-testing.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="img-testing-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <div class="expertise-img-overlay"></div>
+              <h3 class="expertise-title">Testing</h3>
+            </div>
+            <ul class="expertise-list">
+              <li>A/B Testing</li>
+              <li>Multivariate Tests (MVT)</li>
+              <li>Remote Usability Testing</li>
+              <li>Guerilla Testing</li>
+              <li>Hypothesenentwicklung</li>
+              <li>Heatmap &amp; Session-Analyse</li>
+              <li>Feedback-Analyse</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Skill Cards -->
+        <div class="skill-cards reveal">
+
+          <!-- Card 1: Soft Skills -->
+          <div class="skill-card">
+            <div class="skill-card-img-wrap">
+              <img src="img-softskills.svg" alt="" class="skill-card-img skill-card-img--dark" aria-hidden="true" />
+              <img src="img-softskills-light.svg" alt="" class="skill-card-img skill-card-img--light" aria-hidden="true" />
+              <div class="skill-card-overlay"></div>
+              <h3 class="skill-card-title">Soft Skills</h3>
+            </div>
+            <div class="skill-card-pills">
+              <span class="pill">Schnelle Auffassungsgabe</span>
+              <span class="pill">Analytisches Denken</span>
+              <span class="pill">Selbstständige Arbeitsweise</span>
+              <span class="pill">Lösungsorientierte Hands-On-Mentalität</span>
+              <span class="pill">Cross-projektisches Denken</span>
+              <span class="pill">Starke Präsentationskompetenz</span>
+              <span class="pill">Hohe Teamfähigkeit</span>
+              <span class="pill">Agentur- &amp; Corporate-Erfahrung</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Methoden & Tools -->
+          <div class="skill-card">
+            <div class="skill-card-img-wrap">
+              <img src="img-methoden.svg" alt="" class="skill-card-img skill-card-img--dark" aria-hidden="true" />
+              <img src="img-methoden-light.svg" alt="" class="skill-card-img skill-card-img--light" aria-hidden="true" />
+              <div class="skill-card-overlay"></div>
+              <h3 class="skill-card-title">Methoden &amp; Tools</h3>
+            </div>
+            <div class="skill-card-pills">
+              <span class="pill">Scrum</span>
+              <span class="pill">Kanban</span>
+              <span class="pill">Waterfall</span>
+              <span class="pill">Confluence</span>
+              <span class="pill">Jira</span>
+              <span class="pill">Asana</span>
+              <span class="pill">Miro</span>
+              <span class="pill">Whimsical</span>
+              <span class="pill">Slack</span>
+              <span class="pill">Teams</span>
+              <span class="pill">Zoom</span>
+              <span class="pill">GoToMeeting</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Kenntnisse -->
+          <div class="skill-card">
+            <div class="skill-card-img-wrap">
+              <img src="img-kenntnisse.svg" alt="" class="skill-card-img skill-card-img--dark" aria-hidden="true" />
+              <img src="img-kenntnisse-light.svg" alt="" class="skill-card-img skill-card-img--light" aria-hidden="true" />
+              <div class="skill-card-overlay"></div>
+              <h3 class="skill-card-title">Kenntnisse</h3>
+            </div>
+            <div class="skill-card-pills">
+              <span class="pill">App-, Website- &amp; SaaS-Erfahrung</span>
+              <span class="pill">Agile Softwareentwicklung</span>
+              <span class="pill">Starke E-Commerce-Expertise</span>
+              <span class="pill">Data-driven &amp; Tech-savvy Mindset</span>
+              <span class="pill">Projekt- &amp; Stakeholder-Management</span>
+              <span class="pill">Internationale Teamerfahrung</span>
+              <span class="pill">Accessibility / Barrierefreiheit</span>
+              <span class="pill">Conversion Rate Optimization</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Downloads -->
+        <div class="download-bar reveal">
+          <a href="CV/CV_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 15V3m0 12l-4-4m4 4l4-4"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg>
+            CV ansehen
+          </a>
+          <a href="CV/Portfolio_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn download-btn--accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h5M8 16h3"/></svg>
+            Portfolio ansehen (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 02 Referenzen ──────────────────────────────────────────────── -->
+    <section class="section section--dark" id="referenzen">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Referenzen</h2>
+          <p class="section-desc">Kunden und Agenturen – eine Auswahl aus über 20 Jahren Erfahrung.</p>
+        </div>
+        <!-- Logo-Übersicht -->
+        <div class="logos-grid-wrap reveal">
+          <img src="logos-referenzen.svg" alt="Referenzlogos: Humana, BMW, Beiersdorf, Commerzbank, Nestlé, Unilever und weitere" class="logos-grid-img" />
+        </div>
+
+        <div class="client-marquee-wrap reveal" aria-hidden="true">
+          <div class="client-marquee" aria-label="Kunden und Referenzen">
+            <div class="client-track">
+              <span class="client-name">Humana</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">BMW</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Beiersdorf / Nivea</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Commerzbank</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Nestlé</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Unilever</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">DPD</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">O2</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Toshiba</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Honda</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Davidoff</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">UVEX</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">DeBeukelaer</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Alice Hansenet</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">KabelBW</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Ideal Standard</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Sarotti</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Duckstein</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Arena Swimwear</span>
+              <span class="client-sep">·</span>
+              <!-- repeat for seamless loop -->
+              <span class="client-name">Humana</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">BMW</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Beiersdorf / Nivea</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Commerzbank</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Nestlé</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Unilever</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">DPD</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">O2</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Toshiba</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Honda</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">Davidoff</span>
+              <span class="client-sep">·</span>
+              <span class="client-name">UVEX</span>
+              <span class="client-sep">·</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-row reveal">
+          <div class="stat-card">
+            <div class="stat-num" data-target="20">0</div>
+            <div class="stat-label">Jahre Erfahrung</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="50">0</div>
+            <div class="stat-label">+ Kundenprojekte</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-target="100">0</div>
+            <div class="stat-label">% Hands-On</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 03 Erfahrung ──────────────────────────────────────────────── -->
+    <section class="section" id="erfahrung">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-num">03</span>
+          <h2 class="section-title">Erfahrung</h2>
+          <p class="section-desc">Ein beruflicher Weg durch führende Agenturen und Unternehmen.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-year">
+              <span>2016</span>
+              <span class="year-sep">—</span>
+              <span class="year-now">Heute</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge">Freelance</div>
+              <h3 class="timeline-role">UX-Consultant</h3>
+              <p class="timeline-desc">UX-Consulting, User Interface Design, Conversion Rate Optimierung, Experimentation und A/B Testing für verschiedene Unternehmen und Agenturen.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-year">
+              <span>2015</span>
+              <span class="year-sep">—</span>
+              <span>2016</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge">Festanstellung</div>
+              <h3 class="timeline-role">Head of Digital</h3>
+              <p class="timeline-company">Klosedetering Hamburg</p>
+              <p class="timeline-desc">Head of Digital für Agenturkunden wie Humana und DeBeukelaer.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-year">
+              <span>2013</span>
+              <span class="year-sep">—</span>
+              <span>2015</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge">Freelance</div>
+              <h3 class="timeline-role">Fotograf</h3>
+              <p class="timeline-desc">Freiberufliche Tätigkeit als professioneller Fotograf.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-year">
+              <span>2011</span>
+              <span class="year-sep">—</span>
+              <span>2013</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge">Festanstellung</div>
+              <h3 class="timeline-role">Senior UX-Design Expert</h3>
+              <p class="timeline-company">Serviceplan Hamburg</p>
+              <p class="timeline-desc">UX/UI Design Expert für B2B Kommunikation und Digitalisierung für BMW.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-year">
+              <span>2009</span>
+              <span class="year-sep">—</span>
+              <span>2011</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge">Festanstellung</div>
+              <h3 class="timeline-role">Senior UX-Design Expert</h3>
+              <p class="timeline-company">Plan.net Hamburg</p>
+              <p class="timeline-desc">UX/UI Design Expert für Beiersdorf/Nivea, Alice Hansenet, O2, Sarotti, Toshiba uvm.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-year">
+              <span>2006</span>
+              <span class="year-sep">—</span>
+              <span>2009</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge">Festanstellung</div>
+              <h3 class="timeline-role">Senior UX-Design Expert</h3>
+              <p class="timeline-company">Scholz &amp; Friends Interactive</p>
+              <p class="timeline-desc">UX/UI Design Expert für DPD, KabelBW, Ideal Standard, Honda, Unilever, Davidoff, Duckstein, Arena Swimwear, Nestlé, Commerzbank, BMW, UVEX.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 04 Kontakt ────────────────────────────────────────────────── -->
+    <section class="section section--contact" id="kontakt">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-left reveal">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Projekt&shy;anfrage</h2>
+            <p class="contact-intro">Haben Sie ein spannendes Projekt? Ich freue mich auf Ihre Anfrage.</p>
+            <div class="contact-details">
+              <a href="tel:+4915758903333" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.4 2 2 0 013.63 1.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.85a16 16 0 006.29 6.29l.95-1a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>0157 58 90 3333</span>
+              </a>
+              <a href="mailto:digital@czarto.de" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                <span>digital@czarto.de</span>
+              </a>
+              <a href="https://linkedin.com/in/czartodigital" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>linkedin.com/in/czartodigital</span>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form reveal reveal--delay-2" id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="b334e5cb-693d-4e83-934d-d36099f39497" />
+            <input type="hidden" name="subject" value="Neue Projektanfrage – czarto.de" />
+            <input type="hidden" name="from_name" value="Czarto Digital Website" />
+            <input type="hidden" name="redirect" value="false" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Ihr Name" required />
+              </div>
+              <div class="form-group">
+                <label for="company" class="form-label">Unternehmen</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Ihr Unternehmen" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">E-Mail</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Nachricht</label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Erzählen Sie mir von Ihrem Projekt…" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              Anfrage senden
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="Czarto Digital" class="footer-logo-img footer-logo-img--dark" width="110" height="24" />
+        <img src="czarto_logo_2020_invert.svg" alt="Czarto Digital" class="footer-logo-img footer-logo-img--light" width="110" height="24" />
+        <span class="footer-copy">&copy; 2025 André Czartowski</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="impressum.html" class="footer-link">Impressum</a>
+        <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

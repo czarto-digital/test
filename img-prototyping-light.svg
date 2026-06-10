@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220">
+  <defs>
+    <radialGradient id="pGlowL" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0a9578" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#0a9578" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pBlurL"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="pShadowL" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="480" height="220" fill="#f8f8f6"/>
+  <ellipse cx="240" cy="110" rx="160" ry="100" fill="url(#pGlowL)" filter="url(#pBlurL)"/>
+
+  <!-- Frame 1 – back (desktop, faded) -->
+  <g opacity="0.4" filter="url(#pShadowL)">
+    <rect x="48" y="45" width="185" height="130" rx="5" fill="#ffffff" stroke="rgba(10,149,120,0.25)" stroke-width="1.2"/>
+    <rect x="48" y="45" width="185" height="18" rx="5" fill="rgba(10,149,120,0.06)" stroke="rgba(10,149,120,0.2)" stroke-width="1.2"/>
+    <circle cx="60" cy="54" r="3" fill="rgba(0,0,0,0.12)"/>
+    <circle cx="70" cy="54" r="3" fill="rgba(0,0,0,0.12)"/>
+    <circle cx="80" cy="54" r="3" fill="rgba(0,0,0,0.12)"/>
+    <rect x="58" y="72" width="100" height="10" rx="2" fill="rgba(0,0,0,0.07)"/>
+    <rect x="58" y="88" width="155" height="6" rx="2" fill="rgba(0,0,0,0.04)"/>
+    <rect x="58" y="99" width="120" height="6" rx="2" fill="rgba(0,0,0,0.04)"/>
+    <rect x="58" y="115" width="70" height="18" rx="9" fill="rgba(10,149,120,0.10)" stroke="rgba(10,149,120,0.25)" stroke-width="1"/>
+    <rect x="126" y="175" width="12" height="14" rx="2" fill="rgba(0,0,0,0.05)"/>
+    <rect x="108" y="189" width="48" height="4" rx="2" fill="rgba(0,0,0,0.05)"/>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <g opacity="0.5">
+    <path d="M230 105 Q265 90 278 105" fill="none" stroke="#0a9578" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <polygon points="278,100 285,108 271,108" fill="#0a9578" opacity="0.75"/>
+  </g>
+
+  <!-- Frame 2 – middle (tablet, main focus) -->
+  <g filter="url(#pShadowL)">
+    <rect x="168" y="30" width="145" height="190" rx="8" fill="#ffffff" stroke="rgba(10,149,120,0.4)" stroke-width="1.5"/>
+    <rect x="168" y="30" width="145" height="22" rx="8" fill="rgba(10,149,120,0.08)"/>
+    <circle cx="182" cy="41" r="3.5" fill="rgba(0,0,0,0.14)"/>
+    <circle cx="194" cy="41" r="3.5" fill="rgba(0,0,0,0.14)"/>
+    <circle cx="206" cy="41" r="3.5" fill="rgba(0,0,0,0.14)"/>
+    <rect x="180" y="62" width="90" height="12" rx="3" fill="rgba(0,0,0,0.08)"/>
+    <rect x="180" y="80" width="121" height="5" rx="2" fill="rgba(0,0,0,0.05)"/>
+    <rect x="180" y="90" width="100" height="5" rx="2" fill="rgba(0,0,0,0.05)"/>
+    <!-- Image placeholder -->
+    <rect x="180" y="104" width="121" height="54" rx="4" fill="rgba(10,149,120,0.06)" stroke="rgba(10,149,120,0.18)" stroke-width="1"/>
+    <line x1="180" y1="158" x2="301" y2="104" stroke="rgba(10,149,120,0.09)" stroke-width="1"/>
+    <line x1="180" y1="104" x2="301" y2="158" stroke="rgba(10,149,120,0.09)" stroke-width="1"/>
+    <rect x="180" y="164" width="60" height="16" rx="8" fill="#0a9578" opacity="0.80"/>
+    <rect x="220" y="212" width="42" height="4" rx="2" fill="rgba(0,0,0,0.10)"/>
+    <!-- Hotspot -->
+    <circle cx="210" cy="172" r="10" fill="none" stroke="#0a9578" stroke-width="1" stroke-dasharray="2 3" opacity="0.45"/>
+    <circle cx="210" cy="172" r="5" fill="rgba(10,149,120,0.20)"/>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <g opacity="0.5">
+    <path d="M313 100 Q340 85 353 100" fill="none" stroke="#0a9578" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <polygon points="353,95 360,103 346,103" fill="#0a9578" opacity="0.75"/>
+  </g>
+
+  <!-- Frame 3 – front (mobile, faded) -->
+  <g opacity="0.5" filter="url(#pShadowL)">
+    <rect x="315" y="52" width="112" height="148" rx="10" fill="#ffffff" stroke="rgba(10,149,120,0.25)" stroke-width="1.2"/>
+    <rect x="347" y="52" width="48" height="10" rx="5" fill="#ececea"/>
+    <circle cx="371" cy="57" r="3" fill="rgba(10,149,120,0.25)"/>
+    <rect x="325" y="72" width="92" height="10" rx="3" fill="rgba(0,0,0,0.07)"/>
+    <rect x="325" y="87" width="75" height="5" rx="2" fill="rgba(0,0,0,0.04)"/>
+    <rect x="325" y="97" width="84" height="5" rx="2" fill="rgba(0,0,0,0.04)"/>
+    <rect x="325" y="111" width="92" height="46" rx="4" fill="rgba(10,149,120,0.06)"/>
+    <rect x="325" y="163" width="50" height="14" rx="7" fill="rgba(10,149,120,0.15)" stroke="rgba(10,149,120,0.28)" stroke-width="1"/>
+    <rect x="348" y="191" width="46" height="3" rx="2" fill="rgba(0,0,0,0.08)"/>
+  </g>
+
+  <!-- Layer stack indicator -->
+  <g opacity="0.25" transform="translate(430, 165)">
+    <rect x="0" y="12" width="32" height="22" rx="2" fill="none" stroke="#0a9578" stroke-width="1"/>
+    <rect x="4" y="6" width="32" height="22" rx="2" fill="none" stroke="#0a9578" stroke-width="1"/>
+    <rect x="8" y="0" width="32" height="22" rx="2" fill="rgba(10,149,120,0.10)" stroke="#0a9578" stroke-width="1"/>
+  </g>
+</svg>

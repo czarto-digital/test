@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240">
+  <defs>
+    <linearGradient id="ssBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1615"/>
+      <stop offset="100%" stop-color="#192c2a"/>
+    </linearGradient>
+    <radialGradient id="ssGlow1" cx="25%" cy="55%" r="35%">
+      <stop offset="0%" stop-color="#2dc4a0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2dc4a0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ssGlow2" cx="75%" cy="45%" r="30%">
+      <stop offset="0%" stop-color="#c49a5e" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#c49a5e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ssBlur"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="ssShadow"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+
+  <rect width="960" height="240" fill="url(#ssBg)"/>
+  <ellipse cx="240" cy="130" rx="220" ry="130" fill="url(#ssGlow1)" filter="url(#ssBlur)"/>
+  <ellipse cx="720" cy="110" rx="200" ry="120" fill="url(#ssGlow2)" filter="url(#ssBlur)"/>
+
+  <!-- Person 1 (left) -->
+  <g transform="translate(180, 60)" filter="url(#ssShadow)">
+    <circle cx="0" cy="0" r="22" fill="#192c2a" stroke="rgba(45,196,160,0.5)" stroke-width="1.5"/>
+    <circle cx="0" cy="-2" r="9" fill="rgba(45,196,160,0.4)"/>
+    <path d="M-17 22 Q0 14 17 22" fill="rgba(45,196,160,0.25)" stroke="rgba(45,196,160,0.4)" stroke-width="1.2"/>
+  </g>
+
+  <!-- Person 2 (center) -->
+  <g transform="translate(350, 50)" filter="url(#ssShadow)">
+    <circle cx="0" cy="0" r="28" fill="#192c2a" stroke="#2dc4a0" stroke-width="2"/>
+    <circle cx="0" cy="-3" r="11" fill="rgba(45,196,160,0.6)"/>
+    <path d="M-20 27 Q0 18 20 27" fill="rgba(45,196,160,0.35)" stroke="#2dc4a0" stroke-width="1.5"/>
+  </g>
+
+  <!-- Person 3 (right) -->
+  <g transform="translate(520, 65)" filter="url(#ssShadow)">
+    <circle cx="0" cy="0" r="22" fill="#192c2a" stroke="rgba(45,196,160,0.5)" stroke-width="1.5"/>
+    <circle cx="0" cy="-2" r="9" fill="rgba(45,196,160,0.4)"/>
+    <path d="M-17 22 Q0 14 17 22" fill="rgba(45,196,160,0.25)" stroke="rgba(45,196,160,0.4)" stroke-width="1.2"/>
+  </g>
+
+  <!-- Connection lines -->
+  <line x1="202" y1="75" x2="322" y2="68" stroke="rgba(45,196,160,0.3)" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="378" y1="68" x2="498" y2="75" stroke="rgba(45,196,160,0.3)" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="202" y1="80" x2="498" y2="80" stroke="rgba(45,196,160,0.12)" stroke-width="1" stroke-dasharray="2 8"/>
+
+  <!-- Speech bubble 1 (from person 1) -->
+  <g transform="translate(100, 30)">
+    <rect x="0" y="0" width="120" height="38" rx="10" fill="#192c2a" stroke="rgba(45,196,160,0.35)" stroke-width="1.2"/>
+    <polygon points="30,38 20,50 42,38" fill="#192c2a" stroke="rgba(45,196,160,0.35)" stroke-width="1.2"/>
+    <rect x="12" y="12" width="60" height="6" rx="3" fill="rgba(45,196,160,0.35)"/>
+    <rect x="12" y="23" width="40" height="5" rx="2.5" fill="rgba(255,255,255,0.12)"/>
+  </g>
+
+  <!-- Speech bubble 2 (from center person, larger) -->
+  <g transform="translate(290, 10)">
+    <rect x="0" y="0" width="150" height="46" rx="12" fill="#192c2a" stroke="#2dc4a0" stroke-width="1.5"/>
+    <polygon points="55,46 45,60 68,46" fill="#192c2a" stroke="#2dc4a0" stroke-width="1.5"/>
+    <rect x="14" y="13" width="80" height="7" rx="3.5" fill="rgba(45,196,160,0.5)"/>
+    <rect x="14" y="26" width="55" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  </g>
+
+  <!-- Speech bubble 3 (from person 3) -->
+  <g transform="translate(530, 20)">
+    <rect x="0" y="0" width="130" height="40" rx="10" fill="#192c2a" stroke="rgba(196,154,94,0.4)" stroke-width="1.2"/>
+    <polygon points="20,40 10,52 32,40" fill="#192c2a" stroke="rgba(196,154,94,0.4)" stroke-width="1.2"/>
+    <rect x="12" y="12" width="65" height="6" rx="3" fill="rgba(196,154,94,0.35)"/>
+    <rect x="12" y="23" width="45" height="5" rx="2.5" fill="rgba(255,255,255,0.12)"/>
+  </g>
+
+  <!-- Team ring (bottom) -->
+  <ellipse cx="350" cy="175" rx="120" ry="18" fill="none" stroke="rgba(45,196,160,0.15)" stroke-width="1"/>
+  <!-- Dots on ring -->
+  <circle cx="230" cy="175" r="4" fill="rgba(45,196,160,0.4)"/>
+  <circle cx="278" cy="162" r="3" fill="rgba(45,196,160,0.3)"/>
+  <circle cx="350" cy="157" r="4" fill="#2dc4a0" opacity="0.7"/>
+  <circle cx="422" cy="162" r="3" fill="rgba(45,196,160,0.3)"/>
+  <circle cx="470" cy="175" r="4" fill="rgba(45,196,160,0.4)"/>
+
+  <!-- Handshake / connection symbol (right area) -->
+  <g transform="translate(720, 90)" opacity="0.7">
+    <circle cx="0" cy="0" r="50" fill="none" stroke="rgba(45,196,160,0.12)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="32" fill="none" stroke="rgba(45,196,160,0.2)" stroke-width="1.5"/>
+    <circle cx="-20" cy="-5" r="10" fill="#192c2a" stroke="rgba(45,196,160,0.5)" stroke-width="1.5"/>
+    <circle cx="20" cy="-5" r="10" fill="#192c2a" stroke="rgba(45,196,160,0.5)" stroke-width="1.5"/>
+    <path d="M-10,-5 Q0,5 10,-5" fill="none" stroke="#2dc4a0" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-20" cy="-5" r="4" fill="rgba(45,196,160,0.5)"/>
+    <circle cx="20" cy="-5" r="4" fill="rgba(45,196,160,0.5)"/>
+  </g>
+
+  <!-- Floating labels (right) -->
+  <g transform="translate(820, 60)" opacity="0.6">
+    <rect x="0" y="0" width="90" height="24" rx="12" fill="rgba(45,196,160,0.1)" stroke="rgba(45,196,160,0.3)" stroke-width="1"/>
+    <text x="45" y="16" font-family="'Inter',sans-serif" font-size="10" fill="#60d4bc" text-anchor="middle">Teamwork</text>
+  </g>
+  <g transform="translate(840, 96)" opacity="0.5">
+    <rect x="0" y="0" width="80" height="22" rx="11" fill="rgba(196,154,94,0.1)" stroke="rgba(196,154,94,0.3)" stroke-width="1"/>
+    <text x="40" y="15" font-family="'Inter',sans-serif" font-size="10" fill="#d4b47e" text-anchor="middle">Empathy</text>
+  </g>
+  <g transform="translate(855, 130)" opacity="0.4">
+    <rect x="0" y="0" width="72" height="22" rx="11" fill="rgba(45,196,160,0.08)" stroke="rgba(45,196,160,0.2)" stroke-width="1"/>
+    <text x="36" y="15" font-family="'Inter',sans-serif" font-size="10" fill="#60d4bc" text-anchor="middle">Focus</text>
+  </g>
+</svg>
