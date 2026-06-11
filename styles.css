@@ -675,6 +675,15 @@ html.theme-light .expertise-img--light { display: block; }
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.35);
 }
+@media (hover: none) {
+  .expertise-card.in-view {
+    border-color: rgba(45,196,160,0.35);
+    box-shadow: 0 0 0 1px rgba(45,196,160,0.2), 0 8px 32px rgba(45,196,160,0.12);
+  }
+  .expertise-card.in-view .expertise-list li {
+    color: var(--clr-text);
+  }
+}
 
 /* ── Bild-Header ── */
 .expertise-img-wrap {

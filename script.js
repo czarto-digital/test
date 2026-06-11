@@ -281,6 +281,17 @@ if (window.matchMedia('(pointer: fine)').matches) {
   });
 }
 
+/* ─── Expertise Cards: scroll-into-view glow (touch devices only) ────── */
+if (window.matchMedia('(hover: none)').matches) {
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(({ target, isIntersecting }) => {
+      target.classList.toggle('in-view', isIntersecting);
+    });
+  }, { threshold: 0.55 });
+
+  document.querySelectorAll('.expertise-card').forEach(card => cardObserver.observe(card));
+}
+
 // ─── Word Cloud: continuous drift + scale + color animation ──────────
 (function () {
   const rand = (min, max) => min + Math.random() * (max - min);
