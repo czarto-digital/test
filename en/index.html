@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="André Czartowski – UX-Consultant für Business Applications, Design, Experimentation & datengetriebene Optimierung. Hamburg." />
-  <title>UX/UI-Design | Czarto Digital | Hamburg</title>
+  <meta name="description" content="André Czartowski – UX Consultant for Business Applications, Design, Experimentation & data-driven Optimisation. Hamburg." />
+  <title>UX/UI Design | Czarto Digital | Hamburg</title>
   <link rel="alternate" hreflang="de" href="https://digital.czarto.de/" />
   <link rel="alternate" hreflang="en" href="https://digital.czarto.de/en/" />
-  <link rel="stylesheet" href="fonts/fonts.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../fonts/fonts.css" />
+  <link rel="stylesheet" href="../styles.css" />
   <script>
-    // Theme per Wochentag – 0=So,1=Mo,2=Di,3=Mi,4=Do,5=Fr,6=Sa
-    // ?theme=<name> überschreibt für Tests
-    const THEMES = {
-      1: 'theme-light',   // Montag
-      // weitere Themes folgen
-    };
+    const THEMES = { 1: 'theme-light' };
     const param = new URLSearchParams(location.search).get('theme');
     const theme = param ? 'theme-' + param : THEMES[new Date().getDay()];
     if (theme) document.documentElement.classList.add(theme);
   </script>
 </head>
 <body>
-  <!-- SVG-Gradient-Definition für alle Ringe -->
   <svg class="ring-defs" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -36,48 +30,49 @@
   <header class="nav-wrap" id="nav">
     <nav class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Czarto Digital">
-        <img src="logo.svg" alt="Czarto Digital" class="nav-logo-img nav-logo-img--dark" width="200" height="43" />
-        <img src="czarto_logo_2020_invert.svg" alt="Czarto Digital" class="nav-logo-img nav-logo-img--light" width="200" height="43" />
+        <img src="../logo.svg" alt="Czarto Digital" class="nav-logo-img nav-logo-img--dark" width="200" height="43" />
+        <img src="../czarto_logo_2020_invert.svg" alt="Czarto Digital" class="nav-logo-img nav-logo-img--light" width="200" height="43" />
       </a>
+
       <!-- Desktop language switch -->
       <div class="lang-switch lang-switch--desktop">
-        <a href="#" class="lang-btn lang-btn--active" aria-label="Deutsch" hreflang="de">
+        <a href="../" class="lang-btn" aria-label="Deutsch" hreflang="de">
           <span class="flag-circle">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="8" fill="#000"/><rect y="8" width="24" height="8" fill="#DD0000"/><rect y="16" width="24" height="8" fill="#FFCC00"/></svg>
           </span>
         </a>
-        <a href="en/" class="lang-btn" aria-label="English" hreflang="en">
+        <a href="#" class="lang-btn lang-btn--active" aria-label="English" hreflang="en">
           <span class="flag-circle">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="#012169"/><path d="M0,0 L24,24 M24,0 L0,24" stroke="#fff" stroke-width="5"/><path d="M0,0 L24,24 M24,0 L0,24" stroke="#C8102E" stroke-width="3"/><rect x="9" y="0" width="6" height="24" fill="#fff"/><rect x="0" y="9" width="24" height="6" fill="#fff"/><rect x="10" y="0" width="4" height="24" fill="#C8102E"/><rect x="0" y="10" width="24" height="4" fill="#C8102E"/></svg>
           </span>
         </a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="#qualifikation" class="nav-link">Qualifikation</a></li>
-        <li><a href="#referenzen" class="nav-link">Referenzen</a></li>
-        <li><a href="#erfahrung" class="nav-link">Erfahrung</a></li>
-        <li class="nav-sep-item"><a href="impressum.html" class="nav-link nav-link--small">Impressum</a></li>
-        <li><a href="datenschutz.html" class="nav-link nav-link--small">Datenschutz</a></li>
+        <li><a href="#qualifikation" class="nav-link">Qualification</a></li>
+        <li><a href="#referenzen" class="nav-link">References</a></li>
+        <li><a href="#erfahrung" class="nav-link">Experience</a></li>
+        <li class="nav-sep-item"><a href="../impressum.html" class="nav-link nav-link--small">Legal Notice</a></li>
+        <li><a href="../datenschutz.html" class="nav-link nav-link--small">Privacy Policy</a></li>
         <!-- Mobile language switch -->
         <li class="nav-lang-item">
-          <a href="#" class="lang-btn-mobile lang-btn-mobile--active" aria-label="Deutsch" hreflang="de">
+          <a href="../" class="lang-btn-mobile" aria-label="Deutsch" hreflang="de">
             <span class="flag-circle">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="8" fill="#000"/><rect y="8" width="24" height="8" fill="#DD0000"/><rect y="16" width="24" height="8" fill="#FFCC00"/></svg>
             </span>
             <span>Deutsch</span>
           </a>
-          <a href="en/" class="lang-btn-mobile" aria-label="English" hreflang="en">
+          <a href="#" class="lang-btn-mobile lang-btn-mobile--active" aria-label="English" hreflang="en">
             <span class="flag-circle">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="#012169"/><path d="M0,0 L24,24 M24,0 L0,24" stroke="#fff" stroke-width="5"/><path d="M0,0 L24,24 M24,0 L0,24" stroke="#C8102E" stroke-width="3"/><rect x="9" y="0" width="6" height="24" fill="#fff"/><rect x="0" y="9" width="24" height="6" fill="#fff"/><rect x="10" y="0" width="4" height="24" fill="#C8102E"/><rect x="0" y="10" width="24" height="4" fill="#C8102E"/></svg>
             </span>
             <span>English</span>
           </a>
         </li>
-        <li class="nav-cta-item"><a href="#kontakt" class="nav-link nav-link--cta">Kontakt</a></li>
+        <li class="nav-cta-item"><a href="#kontakt" class="nav-link nav-link--cta">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -87,7 +82,7 @@
     <!-- ─── Hero ───────────────────────────────────────────────────────── -->
     <section class="hero" id="hero">
       <div class="hero-bg">
-        <img src="hero-bg.jpg" alt="" class="hero-photo" aria-hidden="true" fetchpriority="high" />
+        <img src="../hero-bg.jpg" alt="" class="hero-photo" aria-hidden="true" fetchpriority="high" />
         <div class="hero-overlay"></div>
         <div class="hero-grid"></div>
         <div class="hero-orb hero-orb--1"></div>
@@ -104,18 +99,18 @@
             &amp;&nbsp;CRO
           </h1>
           <p class="hero-sub reveal reveal--delay-2">
-            UX-Consultant für Business Applications &mdash;<br>
-            Design, Experimentation &amp; datengetriebene Optimierung
+            UX Consultant for Business Applications &mdash;<br>
+            Design, Experimentation &amp; data-driven Optimisation
           </p>
           <div class="hero-actions reveal reveal--delay-3">
-            <a href="#kontakt" class="btn btn--primary">Projekt besprechen</a>
-            <a href="#qualifikation" class="btn btn--ghost">Mehr erfahren</a>
+            <a href="#kontakt" class="btn btn--primary">Discuss a Project</a>
+            <a href="#qualifikation" class="btn btn--ghost">Learn More</a>
           </div>
           <div class="hero-meta reveal reveal--delay-4">
-            <a href="mailto:digital@czarto.de" class="meta-link" aria-label="E-Mail senden">
+            <a href="mailto:digital@czarto.de" class="meta-link" aria-label="Send email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
             </a>
-            <a href="tel:+4915758903333" class="meta-link" aria-label="Anrufen">
+            <a href="tel:+4915758903333" class="meta-link" aria-label="Call">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.24 11.47 11.47 0 003.6.72 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.72 3.6 1 1 0 01-.24 1.1z"/></svg>
             </a>
           </div>
@@ -127,13 +122,13 @@
       </div>
     </section>
 
-    <!-- ─── 01 Qualifikation ───────────────────────────────────────────── -->
+    <!-- ─── 01 Qualification ──────────────────────────────────────────── -->
     <section class="section" id="qualifikation">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-num">01</span>
-          <h2 class="section-title">Qualifikation</h2>
-          <p class="section-desc">Tools, Methoden und Expertise – alles was für exzellente UX zählt.</p>
+          <h2 class="section-title">Qualification</h2>
+          <p class="section-desc">Tools, methods and expertise – everything that counts for excellent UX.</p>
         </div>
 
         <!-- Software Skills -->
@@ -233,20 +228,20 @@
         </div>
 
         <!-- Expertise Cards -->
-        <h3 class="block-label block-label--expertise reveal">Mein fachlicher Scope</h3>
+        <h3 class="block-label block-label--expertise reveal">My Areas of Expertise</h3>
         <div class="expertise-grid reveal">
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-research.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-research-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="../img-research.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="../img-research-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
               <div class="expertise-img-overlay"></div>
-              <h3 class="expertise-title">User-Research</h3>
+              <h3 class="expertise-title">User Research</h3>
             </div>
             <ul class="expertise-list">
-              <li>Usability &amp; UX-Testing</li>
+              <li>Usability &amp; UX Testing</li>
               <li>Surveys &amp; Interviews</li>
               <li>Benchmarking</li>
-              <li>Workshop-Entwicklung</li>
+              <li>Workshop Development</li>
               <li>User Journeys &amp; Maps</li>
               <li>Jobs to be Done (JTBD)</li>
               <li>Motivation Mapping</li>
@@ -254,42 +249,42 @@
           </article>
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-design.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-design-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="../img-design.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="../img-design-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
               <div class="expertise-img-overlay"></div>
               <h3 class="expertise-title">UX/UI Design</h3>
             </div>
             <ul class="expertise-list">
-              <li>Informationsarchitektur</li>
+              <li>Information Architecture</li>
               <li>Usability &amp; Experience</li>
-              <li>UI-Design</li>
-              <li>Design System-Entwicklung</li>
-              <li>Workshop-Facilitation</li>
+              <li>UI Design</li>
+              <li>Design System Development</li>
+              <li>Workshop Facilitation</li>
               <li>Experimentation</li>
-              <li>Conversion-Optimierung</li>
+              <li>Conversion Optimisation</li>
             </ul>
           </article>
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-prototyping.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-prototyping-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="../img-prototyping.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="../img-prototyping-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
               <div class="expertise-img-overlay"></div>
               <h3 class="expertise-title">Prototyping</h3>
             </div>
             <ul class="expertise-list">
               <li>Wireframing &amp; Lo-Fi</li>
-              <li>Interaktive Prototypen</li>
-              <li>Interaktionstiefen</li>
-              <li>Klickdummy-Erstellung</li>
+              <li>Interactive Prototypes</li>
+              <li>Interaction Depths</li>
+              <li>Click Dummy Creation</li>
               <li>Annotations &amp; Specs</li>
-              <li>Dev-Handoff</li>
-              <li>Testszenario-Entwicklung</li>
+              <li>Dev Handoff</li>
+              <li>Test Scenario Development</li>
             </ul>
           </article>
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-testing.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-testing-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="../img-testing.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
+              <img src="../img-testing-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
               <div class="expertise-img-overlay"></div>
               <h3 class="expertise-title">Testing</h3>
             </div>
@@ -297,10 +292,10 @@
               <li>A/B Testing</li>
               <li>Multivariate Tests (MVT)</li>
               <li>Remote Usability Testing</li>
-              <li>Guerilla Testing</li>
-              <li>Hypothesenentwicklung</li>
-              <li>Heatmap &amp; Session-Analyse</li>
-              <li>Feedback-Analyse</li>
+              <li>Guerrilla Testing</li>
+              <li>Hypothesis Development</li>
+              <li>Heatmap &amp; Session Analysis</li>
+              <li>Feedback Analysis</li>
             </ul>
           </article>
         </div>
@@ -308,25 +303,23 @@
         <!-- Skill Clouds -->
         <div class="skill-clouds reveal">
 
-          <!-- Cloud 1: Soft Skills -->
           <div class="skill-cloud">
             <span class="skill-cloud-label">Soft Skills</span>
             <div class="word-cloud">
-              <span class="w w--accent" style="--s:3.2rem;--wt:800">lösungsorientiert</span>
-              <span class="w" style="--s:2.5rem;--wt:200;font-style:italic">kommunikationsstark</span>
-              <span class="w" style="--s:2.8rem;--wt:200">selbstständig</span>
-              <span class="w" style="--s:2.0rem;--wt:600">strukturiert &amp; analytisch</span>
-              <span class="w" style="--s:1.7rem;--wt:300">Hands-On-Mentalität</span>
-              <span class="w" style="--s:1.6rem;--wt:500">schnelle Einarbeitung</span>
-              <span class="w" style="--s:1.5rem;--wt:400">Schnelle Auffassungsgabe</span>
-              <span class="w" style="--s:1.5rem;--wt:400;font-style:italic">projektübergreifendes Denken</span>
-              <span class="w" style="--s:1.5rem;--wt:300">Agentur- &amp; Unternehmenserfahrung</span>
+              <span class="w w--accent" style="--s:3.2rem;--wt:800">solution-oriented</span>
+              <span class="w" style="--s:2.5rem;--wt:200;font-style:italic">strong communicator</span>
+              <span class="w" style="--s:2.8rem;--wt:200">self-directed</span>
+              <span class="w" style="--s:2.0rem;--wt:600">structured &amp; analytical</span>
+              <span class="w" style="--s:1.7rem;--wt:300">hands-on mentality</span>
+              <span class="w" style="--s:1.6rem;--wt:500">fast onboarding</span>
+              <span class="w" style="--s:1.5rem;--wt:400">quick comprehension</span>
+              <span class="w" style="--s:1.5rem;--wt:400;font-style:italic">cross-project thinking</span>
+              <span class="w" style="--s:1.5rem;--wt:300">agency &amp; corporate experience</span>
             </div>
           </div>
 
-          <!-- Cloud 2: Methoden & Tools -->
           <div class="skill-cloud">
-            <span class="skill-cloud-label">Methoden &amp; Tools</span>
+            <span class="skill-cloud-label">Methods &amp; Tools</span>
             <div class="word-cloud">
               <span class="w w--accent" style="--s:3.5rem;--wt:700">Jira</span>
               <span class="w" style="--s:2.6rem;--wt:300">Scrum</span>
@@ -337,9 +330,8 @@
             </div>
           </div>
 
-          <!-- Cloud 3: Kenntnisse -->
           <div class="skill-cloud">
-            <span class="skill-cloud-label">Kenntnisse</span>
+            <span class="skill-cloud-label">Knowledge</span>
             <div class="word-cloud">
               <span class="w" style="--s:3.0rem;--wt:200;font-style:italic">E-Commerce</span>
               <span class="w w--accent" style="--s:2.8rem;--wt:700">CRO</span>
@@ -347,10 +339,10 @@
               <span class="w" style="--s:1.9rem;--wt:400">Accessibility</span>
               <span class="w" style="--s:1.7rem;--wt:300;font-style:italic">Experimentation &amp; A/B</span>
               <span class="w" style="--s:1.5rem;--wt:300">Native Apps &amp; Websites</span>
-              <span class="w" style="--s:1.5rem;--wt:400">SaaS-Anwendungen</span>
-              <span class="w" style="--s:1.5rem;--wt:500">Agile Softwareentwicklung</span>
-              <span class="w" style="--s:1.5rem;--wt:300">Stakeholder-Management</span>
-              <span class="w" style="--s:1.5rem;--wt:400">Internationale Teams</span>
+              <span class="w" style="--s:1.5rem;--wt:400">SaaS Applications</span>
+              <span class="w" style="--s:1.5rem;--wt:500">Agile Software Development</span>
+              <span class="w" style="--s:1.5rem;--wt:300">Stakeholder Management</span>
+              <span class="w" style="--s:1.5rem;--wt:400">International Teams</span>
             </div>
           </div>
 
@@ -358,33 +350,32 @@
 
         <!-- Downloads -->
         <div class="download-bar reveal">
-          <a href="CV/CV_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn">
+          <a href="../CV/CV_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 15V3m0 12l-4-4m4 4l4-4"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg>
-            CV ansehen
+            View CV
           </a>
-          <a href="CV/Portfolio_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn download-btn--accent">
+          <a href="../CV/Portfolio_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn download-btn--accent">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h5M8 16h3"/></svg>
-            Portfolio ansehen (PDF)
+            View Portfolio (PDF)
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ─── 02 Referenzen ──────────────────────────────────────────────── -->
+    <!-- ─── 02 References ─────────────────────────────────────────────── -->
     <section class="section section--dark" id="referenzen">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-num">02</span>
-          <h2 class="section-title">Referenzen</h2>
-          <p class="section-desc">Kunden und Agenturen – eine Auswahl aus über 20 Jahren Erfahrung.</p>
+          <h2 class="section-title">References</h2>
+          <p class="section-desc">Clients and agencies – a selection from over 20 years of experience.</p>
         </div>
-        <!-- Logo-Übersicht -->
         <div class="logos-grid-wrap reveal">
-          <img src="logos-referenzen.svg" alt="Referenzlogos: Humana, BMW, Beiersdorf, Commerzbank, Nestlé, Unilever und weitere" class="logos-grid-img" />
+          <img src="../logos-referenzen.svg" alt="Reference logos: Humana, BMW, Beiersdorf, Commerzbank, Nestlé, Unilever and more" class="logos-grid-img" />
         </div>
 
         <div class="client-marquee-wrap reveal" aria-hidden="true">
-          <div class="client-marquee" aria-label="Kunden und Referenzen">
+          <div class="client-marquee" aria-label="Clients and References">
             <div class="client-track">
               <span class="client-name">Humana</span>
               <span class="client-sep">·</span>
@@ -424,7 +415,6 @@
               <span class="client-sep">·</span>
               <span class="client-name">Arena Swimwear</span>
               <span class="client-sep">·</span>
-              <!-- repeat for seamless loop -->
               <span class="client-name">Humana</span>
               <span class="client-sep">·</span>
               <span class="client-name">BMW</span>
@@ -456,11 +446,11 @@
         <div class="stats-row reveal">
           <div class="stat-card">
             <div class="stat-num" data-target="20">0</div>
-            <div class="stat-label">Jahre Erfahrung</div>
+            <div class="stat-label">Years of Experience</div>
           </div>
           <div class="stat-card">
             <div class="stat-num" data-target="50">0</div>
-            <div class="stat-label">+ Kundenprojekte</div>
+            <div class="stat-label">+ Client Projects</div>
           </div>
           <div class="stat-card">
             <div class="stat-num" data-target="100">0</div>
@@ -470,25 +460,25 @@
       </div>
     </section>
 
-    <!-- ─── 03 Erfahrung ──────────────────────────────────────────────── -->
+    <!-- ─── 03 Experience ─────────────────────────────────────────────── -->
     <section class="section" id="erfahrung">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-num">03</span>
-          <h2 class="section-title">Erfahrung</h2>
-          <p class="section-desc">Ein beruflicher Weg durch führende Agenturen und Unternehmen.</p>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-desc">A professional journey through leading agencies and companies.</p>
         </div>
         <div class="timeline">
           <article class="timeline-item reveal">
             <div class="timeline-year">
               <span>2016</span>
               <span class="year-sep">—</span>
-              <span class="year-now">Heute</span>
+              <span class="year-now">Present</span>
             </div>
             <div class="timeline-content">
               <div class="timeline-badge">Freelance</div>
-              <h3 class="timeline-role">UX-Consultant</h3>
-              <p class="timeline-desc">UX-Consulting, User Interface Design, Conversion Rate Optimierung, Experimentation und A/B Testing für verschiedene Unternehmen und Agenturen.</p>
+              <h3 class="timeline-role">UX Consultant</h3>
+              <p class="timeline-desc">UX Consulting, User Interface Design, Conversion Rate Optimisation, Experimentation and A/B Testing for various companies and agencies.</p>
             </div>
           </article>
           <article class="timeline-item reveal">
@@ -498,10 +488,10 @@
               <span>2016</span>
             </div>
             <div class="timeline-content">
-              <div class="timeline-badge">Festanstellung</div>
+              <div class="timeline-badge">Full-time</div>
               <h3 class="timeline-role">Head of Digital</h3>
               <p class="timeline-company">Klosedetering Hamburg</p>
-              <p class="timeline-desc">Head of Digital für Agenturkunden wie Humana und DeBeukelaer.</p>
+              <p class="timeline-desc">Head of Digital for agency clients including Humana and DeBeukelaer.</p>
             </div>
           </article>
           <article class="timeline-item reveal">
@@ -512,8 +502,8 @@
             </div>
             <div class="timeline-content">
               <div class="timeline-badge">Freelance</div>
-              <h3 class="timeline-role">Fotograf</h3>
-              <p class="timeline-desc">Freiberufliche Tätigkeit als professioneller Fotograf.</p>
+              <h3 class="timeline-role">Photographer</h3>
+              <p class="timeline-desc">Freelance activity as a professional photographer.</p>
             </div>
           </article>
           <article class="timeline-item reveal">
@@ -523,10 +513,10 @@
               <span>2013</span>
             </div>
             <div class="timeline-content">
-              <div class="timeline-badge">Festanstellung</div>
-              <h3 class="timeline-role">Senior UX-Design Expert</h3>
+              <div class="timeline-badge">Full-time</div>
+              <h3 class="timeline-role">Senior UX Design Expert</h3>
               <p class="timeline-company">Serviceplan Hamburg</p>
-              <p class="timeline-desc">UX/UI Design Expert für B2B Kommunikation und Digitalisierung für BMW.</p>
+              <p class="timeline-desc">UX/UI Design Expert for B2B communication and digitalisation for BMW.</p>
             </div>
           </article>
           <article class="timeline-item reveal">
@@ -536,10 +526,10 @@
               <span>2011</span>
             </div>
             <div class="timeline-content">
-              <div class="timeline-badge">Festanstellung</div>
-              <h3 class="timeline-role">Senior UX-Design Expert</h3>
+              <div class="timeline-badge">Full-time</div>
+              <h3 class="timeline-role">Senior UX Design Expert</h3>
               <p class="timeline-company">Plan.net Hamburg</p>
-              <p class="timeline-desc">UX/UI Design Expert für Beiersdorf/Nivea, Alice Hansenet, O2, Sarotti, Toshiba uvm.</p>
+              <p class="timeline-desc">UX/UI Design Expert for Beiersdorf/Nivea, Alice Hansenet, O2, Sarotti, Toshiba and more.</p>
             </div>
           </article>
           <article class="timeline-item reveal">
@@ -549,24 +539,24 @@
               <span>2009</span>
             </div>
             <div class="timeline-content">
-              <div class="timeline-badge">Festanstellung</div>
-              <h3 class="timeline-role">Senior UX-Design Expert</h3>
+              <div class="timeline-badge">Full-time</div>
+              <h3 class="timeline-role">Senior UX Design Expert</h3>
               <p class="timeline-company">Scholz &amp; Friends Interactive</p>
-              <p class="timeline-desc">UX/UI Design Expert für DPD, KabelBW, Ideal Standard, Honda, Unilever, Davidoff, Duckstein, Arena Swimwear, Nestlé, Commerzbank, BMW, UVEX.</p>
+              <p class="timeline-desc">UX/UI Design Expert for DPD, KabelBW, Ideal Standard, Honda, Unilever, Davidoff, Duckstein, Arena Swimwear, Nestlé, Commerzbank, BMW, UVEX.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ─── 04 Kontakt ────────────────────────────────────────────────── -->
+    <!-- ─── 04 Contact ────────────────────────────────────────────────── -->
     <section class="section section--contact" id="kontakt">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-left reveal">
             <span class="section-num">04</span>
-            <h2 class="section-title">Projekt&shy;anfrage</h2>
-            <p class="contact-intro">Haben Sie ein spannendes Projekt? Ich freue mich auf Ihre Anfrage.</p>
+            <h2 class="section-title">Project Enquiry</h2>
+            <p class="contact-intro">Have an exciting project? I look forward to hearing from you.</p>
             <div class="contact-details">
               <a href="tel:+4915758903333" class="contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.4 2 2 0 013.63 1.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.85a16 16 0 006.29 6.29l.95-1a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
@@ -584,29 +574,29 @@
           </div>
           <form class="contact-form reveal reveal--delay-2" id="contactForm" novalidate>
             <input type="hidden" name="access_key" value="b334e5cb-693d-4e83-934d-d36099f39497" />
-            <input type="hidden" name="subject" value="Neue Projektanfrage – czarto.de" />
+            <input type="hidden" name="subject" value="New Project Enquiry – czarto.de" />
             <input type="hidden" name="from_name" value="Czarto Digital Website" />
             <input type="hidden" name="redirect" value="false" />
             <div class="form-row">
               <div class="form-group">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Ihr Name" required />
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required />
               </div>
               <div class="form-group">
-                <label for="company" class="form-label">Unternehmen</label>
-                <input type="text" id="company" name="company" class="form-input" placeholder="Ihr Unternehmen" />
+                <label for="company" class="form-label">Company</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Your Company" />
               </div>
             </div>
             <div class="form-group">
-              <label for="email" class="form-label">E-Mail</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required />
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
             </div>
             <div class="form-group">
-              <label for="message" class="form-label">Nachricht</label>
-              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Erzählen Sie mir von Ihrem Projekt…" rows="5" required></textarea>
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project…" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full">
-              Anfrage senden
+              Send Enquiry
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
           </form>
@@ -620,17 +610,17 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="logo.svg" alt="Czarto Digital" class="footer-logo-img footer-logo-img--dark" width="165" height="36" />
-        <img src="czarto_logo_2020_invert.svg" alt="Czarto Digital" class="footer-logo-img footer-logo-img--light" width="165" height="36" />
+        <img src="../logo.svg" alt="Czarto Digital" class="footer-logo-img footer-logo-img--dark" width="165" height="36" />
+        <img src="../czarto_logo_2020_invert.svg" alt="Czarto Digital" class="footer-logo-img footer-logo-img--light" width="165" height="36" />
         <span class="footer-copy">&copy; 2026 André Czartowski</span>
       </div>
       <nav class="footer-links" aria-label="Footer Navigation">
-        <a href="impressum.html" class="footer-link">Impressum</a>
-        <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+        <a href="../impressum.html" class="footer-link">Legal Notice</a>
+        <a href="../datenschutz.html" class="footer-link">Privacy Policy</a>
       </nav>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
