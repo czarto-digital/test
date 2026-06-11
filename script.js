@@ -132,30 +132,87 @@ document.head.appendChild(activeStyle);
 /* ─── Form ───────────────────────────────────────────────────────────────── */
 const form = document.getElementById('contactForm');
 if (form) {
+  const isEN = document.documentElement.lang === 'en';
+  const MSGS = {
+    nameRequired:    isEN ? 'Please enter your name.'               : 'Bitte Namen eingeben.',
+    emailRequired:   isEN ? 'Please enter your email address.'      : 'Bitte E-Mail-Adresse eingeben.',
+    emailInvalid:    isEN ? 'Please enter a valid email address.'   : 'Bitte eine gültige E-Mail-Adresse eingeben.',
+    messageRequired: isEN ? 'Please enter a message.'              : 'Bitte Nachricht eingeben.',
+    sending:         isEN ? 'Sending…'                              : 'Wird gesendet…',
+    success:         isEN ? '✓ Message sent!'                       : '✓ Nachricht gesendet!',
+    error:           isEN ? '✗ Error – please email us directly'    : '✗ Fehler – bitte per E-Mail melden',
+  };
+
+  function setError(input, msg) {
+    const err = document.getElementById(input.id + '-error');
+    if (!err) return;
+    err.textContent = msg;
+    input.classList.toggle('form-input--error', !!msg);
+  }
+
+  function validateField(input) {
+    if (input.id === 'name') {
+      setError(input, input.value.trim() ? '' : MSGS.nameRequired);
+    } else if (input.id === 'email') {
+      if (!input.value.trim()) setError(input, MSGS.emailRequired);
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) setError(input, MSGS.emailInvalid);
+      else setError(input, '');
+    } else if (input.id === 'message') {
+      setError(input, input.value.trim() ? '' : MSGS.messageRequired);
+    }
+    return !document.getElementById(input.id + '-error')?.textContent;
+  }
+
+  // Live-Validierung nach erstem Blur
+  form.querySelectorAll('[required]').forEach(input => {
+    input.addEventListener('blur', () => validateField(input), { once: false });
+    input.addEventListener('input', () => {
+      if (input.classList.contains('form-input--error')) validateField(input);
+    });
+  });
+
   form.addEventListener('submit', async e => {
     e.preventDefault();
+
+    // Alle Felder validieren
+    let valid = true;
+    form.querySelectorAll('[required]').forEach(input => {
+      if (!validateField(input)) valid = false;
+    });
+    if (!valid) {
+      form.querySelector('.form-input--error')?.focus();
+      return;
+    }
+
     const btn = form.querySelector('[type="submit"]');
     const originalHTML = btn.innerHTML;
-    btn.textContent = 'Wird gesendet…';
+    btn.textContent = MSGS.sending;
     btn.disabled = true;
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
 
     try {
       const data = new FormData(form);
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: data
+        body: data,
+        signal: controller.signal,
       });
+      clearTimeout(timeout);
       const json = await res.json();
 
       if (json.success) {
-        btn.innerHTML = '✓ Nachricht gesendet!';
+        btn.innerHTML = MSGS.success;
         btn.style.background = '#22c55e';
         form.reset();
+        form.querySelectorAll('[required]').forEach(i => i.classList.remove('form-input--error'));
       } else {
         throw new Error(json.message);
       }
     } catch (err) {
-      btn.innerHTML = '✗ Fehler – bitte per E-Mail melden';
+      clearTimeout(timeout);
+      btn.innerHTML = MSGS.error;
       btn.style.background = '#ef4444';
     }
 

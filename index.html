@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="André Czartowski – UX-Consultant für Business Applications, Design, Experimentation & datengetriebene Optimierung. Hamburg." />
+  <meta name="description" content="André Czartowski – UX-Consultant für Business Applications, Design, Experimentation & datengetriebene Optimierung. Über 20 Jahre Erfahrung. Hamburg." />
   <title>UX/UI-Design | Czarto Digital | Hamburg</title>
+  <link rel="canonical" href="https://digital.czarto.de/" />
   <link rel="alternate" hreflang="de" href="https://digital.czarto.de/" />
   <link rel="alternate" hreflang="en" href="https://digital.czarto.de/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://digital.czarto.de/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://digital.czarto.de/" />
+  <meta property="og:title" content="UX/UI-Design | Czarto Digital | Hamburg" />
+  <meta property="og:description" content="André Czartowski – UX-Consultant für Business Applications, Design, Experimentation & datengetriebene Optimierung. Über 20 Jahre Erfahrung. Hamburg." />
+  <meta property="og:image" content="https://digital.czarto.de/hero-bg.jpg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UX/UI-Design | Czarto Digital | Hamburg" />
+  <meta name="twitter:description" content="André Czartowski – UX-Consultant für Business Applications, Design & datengetriebene Optimierung. Hamburg." />
+  <meta name="twitter:image" content="https://digital.czarto.de/hero-bg.jpg" />
   <link rel="stylesheet" href="fonts/fonts.css" />
   <link rel="stylesheet" href="styles.css" />
   <script>
@@ -77,7 +92,6 @@
             <span>English</span>
           </a>
         </li>
-        <li class="nav-cta-item"><a href="#kontakt" class="nav-link nav-link--cta">Kontakt</a></li>
       </ul>
     </nav>
   </header>
@@ -104,26 +118,57 @@
             &amp;&nbsp;CRO
           </h1>
           <p class="hero-sub reveal reveal--delay-2">
-            UX-Consultant für Business Applications &mdash;<br>
+            UX-Consultant für Business Applications &mdash;
             Design, Experimentation &amp; datengetriebene Optimierung
           </p>
-          <div class="hero-actions reveal reveal--delay-3">
-            <a href="#kontakt" class="btn btn--primary">Projekt besprechen</a>
-            <a href="#qualifikation" class="btn btn--ghost">Mehr erfahren</a>
-          </div>
-          <div class="hero-meta reveal reveal--delay-4">
-            <a href="mailto:digital@czarto.de" class="meta-link" aria-label="E-Mail senden">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-            </a>
+          <div class="hero-meta reveal reveal--delay-3">
             <a href="tel:+4915758903333" class="meta-link" aria-label="Anrufen">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.24 11.47 11.47 0 003.6.72 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.72 3.6 1 1 0 01-.24 1.1z"/></svg>
             </a>
+            <a href="mailto:digital@czarto.de" class="meta-link" aria-label="E-Mail senden">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/czartodigital" target="_blank" rel="noopener noreferrer" class="meta-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="hero-scroll-hint" aria-hidden="true">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+
+        <!-- Kontakt im Hero – volle Breite -->
+        <div class="hero-contact reveal" id="kontakt">
+          <h2 class="hero-contact-title">Projekt&shy;anfrage</h2>
+          <form class="contact-form hero-contact-form" id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="b334e5cb-693d-4e83-934d-d36099f39497" />
+            <input type="hidden" name="subject" value="Neue Projektanfrage – czarto.de" />
+            <input type="hidden" name="from_name" value="Czarto Digital Website" />
+            <input type="hidden" name="redirect" value="false" />
+            <div class="form-row-triple">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Ihr Name" required aria-describedby="name-error" autocomplete="name" />
+                <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">E-Mail</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required aria-describedby="email-error" autocomplete="email" />
+                <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-row-message">
+              <div class="form-group">
+                <label for="message" class="form-label">Nachricht</label>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Erzählen Sie mir von Ihrem Projekt…" rows="2" required aria-describedby="message-error"></textarea>
+              </div>
+              <div class="form-submit-wrap">
+                <button type="submit" class="btn btn--primary">
+                  Anfrage senden
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+            <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -237,8 +282,8 @@
         <div class="expertise-grid reveal">
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-research.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-research-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="img-research.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" width="280" height="200" />
+              <img src="img-research-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" width="280" height="200" />
               <div class="expertise-img-overlay"></div>
               <h3 class="expertise-title">User-Research</h3>
             </div>
@@ -254,8 +299,8 @@
           </article>
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-design.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-design-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="img-design.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" width="280" height="200" />
+              <img src="img-design-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" width="280" height="200" />
               <div class="expertise-img-overlay"></div>
               <h3 class="expertise-title">UX/UI Design</h3>
             </div>
@@ -271,8 +316,8 @@
           </article>
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-prototyping.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-prototyping-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="img-prototyping.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" width="280" height="200" />
+              <img src="img-prototyping-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" width="280" height="200" />
               <div class="expertise-img-overlay"></div>
               <h3 class="expertise-title">Prototyping</h3>
             </div>
@@ -288,8 +333,8 @@
           </article>
           <article class="expertise-card">
             <div class="expertise-img-wrap">
-              <img src="img-testing.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" />
-              <img src="img-testing-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" />
+              <img src="img-testing.svg" alt="" class="expertise-img expertise-img--dark" aria-hidden="true" width="280" height="200" />
+              <img src="img-testing-light.svg" alt="" class="expertise-img expertise-img--light" aria-hidden="true" width="280" height="200" />
               <div class="expertise-img-overlay"></div>
               <h3 class="expertise-title">Testing</h3>
             </div>
@@ -356,17 +401,6 @@
 
         </div>
 
-        <!-- Downloads -->
-        <div class="download-bar reveal">
-          <a href="CV/CV_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 15V3m0 12l-4-4m4 4l4-4"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg>
-            CV ansehen
-          </a>
-          <a href="CV/Portfolio_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn download-btn--accent">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h5M8 16h3"/></svg>
-            Portfolio ansehen (PDF)
-          </a>
-        </div>
       </div>
     </section>
 
@@ -467,6 +501,18 @@
             <div class="stat-label">% Hands-On</div>
           </div>
         </div>
+
+        <!-- Downloads -->
+        <div class="download-bar reveal">
+          <a href="CV/CV_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 15V3m0 12l-4-4m4 4l4-4"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg>
+            CV ansehen
+          </a>
+          <a href="CV/Portfolio_Czartowski_2026.pdf" target="_blank" rel="noopener" class="download-btn download-btn--accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h5M8 16h3"/></svg>
+            Portfolio ansehen
+          </a>
+        </div>
       </div>
     </section>
 
@@ -559,60 +605,6 @@
       </div>
     </section>
 
-    <!-- ─── 04 Kontakt ────────────────────────────────────────────────── -->
-    <section class="section section--contact" id="kontakt">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-left reveal">
-            <span class="section-num">04</span>
-            <h2 class="section-title">Projekt&shy;anfrage</h2>
-            <p class="contact-intro">Haben Sie ein spannendes Projekt? Ich freue mich auf Ihre Anfrage.</p>
-            <div class="contact-details">
-              <a href="tel:+4915758903333" class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.4 2 2 0 013.63 1.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.85a16 16 0 006.29 6.29l.95-1a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                <span>0157 58 90 3333</span>
-              </a>
-              <a href="mailto:digital@czarto.de" class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-                <span>digital@czarto.de</span>
-              </a>
-              <a href="https://linkedin.com/in/czartodigital" target="_blank" rel="noopener noreferrer" class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                <span>linkedin.com/in/czartodigital</span>
-              </a>
-            </div>
-          </div>
-          <form class="contact-form reveal reveal--delay-2" id="contactForm" novalidate>
-            <input type="hidden" name="access_key" value="b334e5cb-693d-4e83-934d-d36099f39497" />
-            <input type="hidden" name="subject" value="Neue Projektanfrage – czarto.de" />
-            <input type="hidden" name="from_name" value="Czarto Digital Website" />
-            <input type="hidden" name="redirect" value="false" />
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Ihr Name" required />
-              </div>
-              <div class="form-group">
-                <label for="company" class="form-label">Unternehmen</label>
-                <input type="text" id="company" name="company" class="form-input" placeholder="Ihr Unternehmen" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">E-Mail</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required />
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label">Nachricht</label>
-              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Erzählen Sie mir von Ihrem Projekt…" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full">
-              Anfrage senden
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
 
   </main>
 
