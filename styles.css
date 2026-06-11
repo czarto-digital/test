@@ -1319,7 +1319,6 @@ html.theme-light .expertise-img--light { display: block; }
 @media (max-width: 480px) {
   .download-bar { flex-direction: column; }
   .download-btn { width: 100%; justify-content: center; }
-  .stats-row { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ─── Reduced Motion ─────────────────────────────────────────────────────── */
@@ -1536,3 +1535,7 @@ html.theme-light .ring-fill {
 .w--accent:hover  { color: var(--clr-accent-2);  }
 .w--tertiary      { color: var(--clr-tertiary);  }
 .w--tertiary:hover{ color: var(--clr-tertiary-2);}
+
+@media (max-width: 500px) {
+  .w { font-size: min(var(--s, 1.5rem), 7.5vw); }
+}
