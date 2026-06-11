@@ -1254,13 +1254,14 @@ html.theme-light .expertise-img--light { display: block; }
   .ring-name  { font-size: 0.88rem; }
 }
 @media (max-width: 600px) {
-  .rings-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem 0.5rem; }
-  .ring-wrap  { width: 76px; height: 76px; }
-  .ring-pct   { font-size: 0.78rem; }
-  .ring-name  { font-size: 0.72rem; }
+  .rings-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1rem; }
+  .ring-wrap  { width: 100px; height: 100px; }
+  .ring-pct   { font-size: 0.9rem; }
+  .ring-name  { font-size: 0.8rem; }
 }
 @media (max-width: 380px) {
-  .rings-grid { grid-template-columns: repeat(3, 1fr); }
+  .rings-grid { grid-template-columns: repeat(2, 1fr); }
+  .ring-wrap  { width: 88px; height: 88px; }
 }
 
 /* ─── Mobile ─────────────────────────────────────────────────────────────── */
