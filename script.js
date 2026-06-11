@@ -8,11 +8,22 @@ onScroll();
 const toggle = document.getElementById('navToggle');
 const links  = document.getElementById('navLinks');
 
-toggle.addEventListener('click', () => {
+function toggleMenu() {
   const open = toggle.classList.toggle('open');
   links.classList.toggle('open', open);
   toggle.setAttribute('aria-expanded', open);
   document.body.style.overflow = open ? 'hidden' : '';
+}
+
+toggle.addEventListener('touchstart', e => {
+  e.preventDefault();
+  toggleMenu();
+}, { passive: false });
+
+toggle.addEventListener('click', e => {
+  // touchstart already handled on touch devices
+  if (e.detail === 0) return; // synthetic click from touch, skip
+  toggleMenu();
 });
 
 links.querySelectorAll('a').forEach(a => {

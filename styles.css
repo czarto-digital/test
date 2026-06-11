@@ -1280,7 +1280,10 @@ html.theme-light .expertise-img--light { display: block; }
   .nav-links {
     display: none;
     position: fixed;
-    inset: var(--nav-h) 0 0 0;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    height: calc(100dvh - var(--nav-h));
     background: rgba(10,10,15,0.97);
     backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1289,6 +1292,7 @@ html.theme-light .expertise-img--light { display: block; }
     gap: 0;
     z-index: 99;
     padding: 0 40px 40px;
+    overflow-y: auto;
     animation: fadeIn 0.2s var(--ease-out);
     list-style: none;
   }
