@@ -511,15 +511,28 @@ html.theme-light .expertise-img--light { display: block; }
 
 /* ─── Skills / Ringe ─────────────────────────────────────────────────────── */
 .skills-block {
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
+}
+
+.block-label--expertise {
+  margin-bottom: 2rem;
 }
 .block-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+  font-weight: 400;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--clr-text-muted);
+  color: var(--clr-text);
   margin-bottom: 1.75rem;
+  margin-left: calc(-1 * clamp(1rem, 5vw, 3rem));
+  padding: 0.5em 4em 0.5em clamp(1rem, 5vw, 3rem);
+  background: linear-gradient(to right,
+    transparent 0%,
+    rgba(10,149,120,0.22) 12%,
+    rgba(10,149,120,0.22) 55%,
+    transparent 88%
+  );
 }
 
 /* Ring-Grid */
@@ -1468,3 +1481,58 @@ html.theme-light .nav-links {
 html.theme-light .ring-fill {
   filter: drop-shadow(0 0 6px rgba(10,149,120,0.5));
 }
+
+/* ─── Skill Clouds ───────────────────────────────────────────────── */
+.skill-clouds {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-block: 3rem 6rem;
+}
+
+.skill-cloud-label {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--clr-text);
+  margin-bottom: 1.8rem;
+  margin-left: calc(-1 * clamp(1rem, 5vw, 3rem));
+  padding: 0.5em 4em 0.5em clamp(1rem, 5vw, 3rem);
+  background: linear-gradient(to right,
+    transparent 0%,
+    rgba(10,149,120,0.22) 12%,
+    rgba(10,149,120,0.22) 55%,
+    transparent 88%
+  );
+}
+
+.word-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.8rem;
+}
+
+.w {
+  font-size: var(--s, 1.5rem);
+  font-weight: var(--wt, 400);
+  color: var(--clr-text-muted);
+  line-height: 1.2;
+  cursor: default;
+  display: inline-block;
+  will-change: transform;
+  padding: 0.15em 0;
+  transition: color 0.22s ease;
+}
+
+.w:hover {
+  color: var(--clr-text);
+}
+
+.w--accent        { color: var(--clr-accent);    }
+.w--accent:hover  { color: var(--clr-accent-2);  }
+.w--tertiary      { color: var(--clr-tertiary);  }
+.w--tertiary:hover{ color: var(--clr-tertiary-2);}

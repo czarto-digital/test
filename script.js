@@ -269,3 +269,38 @@ if (window.matchMedia('(pointer: fine)').matches) {
     ring.style.opacity = '1';
   });
 }
+
+// ─── Word Cloud: continuous drift + scale + color animation ──────────
+(function () {
+  const rand = (min, max) => min + Math.random() * (max - min);
+
+  // Color endpoints: accent green ↔ near-white
+  const C_GREEN = [10, 149, 120];
+  const C_WHITE = [235, 235, 233];
+
+  function lerp(a, b, t) {
+    return Math.round(a + (b - a) * t);
+  }
+  function blendColor(t) {
+    return `rgb(${lerp(C_GREEN[0], C_WHITE[0], t)},${lerp(C_GREEN[1], C_WHITE[1], t)},${lerp(C_GREEN[2], C_WHITE[2], t)})`;
+  }
+
+  function animateWord(w) {
+    const dur   = rand(2500, 5000);
+    const tx    = rand(-10, 10);
+    const ty    = rand(-10, 10);
+    const sc    = rand(0.88, 1.12);
+    const colorT = rand(0, 1); // 0 = green, 1 = white
+
+    w.style.transition = `transform ${dur}ms cubic-bezier(0.45,0,0.55,1), color ${dur}ms ease`;
+    w.style.transform  = `translate(${tx}px, ${ty}px) scale(${sc})`;
+    w.style.color      = blendColor(colorT);
+
+    w._driftTimer = setTimeout(() => animateWord(w), dur);
+  }
+
+  document.querySelectorAll('.word-cloud .w').forEach(w => {
+    const delay = rand(0, 3000);
+    w._driftTimer = setTimeout(() => animateWord(w), delay);
+  });
+}());
