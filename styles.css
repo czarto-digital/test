@@ -1215,22 +1215,24 @@ html.theme-light .expertise-img--light { display: block; }
 
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 .footer {
-  padding-block: 1.75rem;
+  padding-block: 2.5rem;
   border-top: 1px solid var(--clr-border);
   background: var(--clr-bg);
 }
 .footer-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1rem;
+  text-align: center;
 }
 .footer-brand {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.75rem;
 }
+.footer-logo-img { width: 165px; }
 .footer-copy {
   font-size: 0.8rem;
   color: var(--clr-text-muted);
