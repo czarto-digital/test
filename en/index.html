@@ -27,7 +27,8 @@
   <script>
     const THEMES = { 1: 'theme-light' };
     const param = new URLSearchParams(location.search).get('theme');
-    const theme = param ? 'theme-' + param : THEMES[new Date().getDay()];
+    const saved = localStorage.getItem('czarto-theme');
+    const theme = param ? 'theme-' + param : saved || THEMES[new Date().getDay()];
     if (theme) document.documentElement.classList.add(theme);
   </script>
 </head>
@@ -63,6 +64,12 @@
         </a>
       </div>
 
+      <!-- Theme Toggle (Desktop) -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour scheme">
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -86,6 +93,21 @@
             </span>
             <span>English</span>
           </a>
+        </li>
+        <!-- Mobile Theme Toggle -->
+        <li class="nav-theme-item">
+          <button class="theme-btn-mobile theme-btn-mobile--light" id="themeToggleMobileLight" aria-label="Light Mode">
+            <span class="theme-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            </span>
+            Light
+          </button>
+          <button class="theme-btn-mobile theme-btn-mobile--dark" id="themeToggleMobileDark" aria-label="Dark Mode">
+            <span class="theme-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </span>
+            Dark
+          </button>
         </li>
       </ul>
     </nav>

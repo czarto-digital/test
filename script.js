@@ -1,3 +1,39 @@
+/* ─── Theme Toggle ───────────────────────────────────────────────────────── */
+function setTheme(light) {
+  const isLight = light;
+  document.documentElement.classList.toggle('theme-light', isLight);
+  localStorage.setItem('czarto-theme', isLight ? 'theme-light' : '');
+  updateThemeBtnsMobile();
+  document.querySelectorAll('.word-cloud .w').forEach(w => {
+    const t = Math.random();
+    w.style.color = (() => {
+      const lo = isLight ? [104, 133, 87]  : [45, 196, 160];
+      const hi = isLight ? [160, 185, 138] : [180, 230, 220];
+      const r = a => Math.round(a[0] + (a[1] - a[0]) * t);
+      return `rgb(${r([lo[0],hi[0]])},${r([lo[1],hi[1]])},${r([lo[2],hi[2]])})`;
+    })();
+  });
+}
+
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) themeToggle.addEventListener('click', () => {
+  setTheme(!document.documentElement.classList.contains('theme-light'));
+});
+
+function updateThemeBtnsMobile() {
+  const isLight = document.documentElement.classList.contains('theme-light');
+  const btnLight = document.getElementById('themeToggleMobileLight');
+  const btnDark  = document.getElementById('themeToggleMobileDark');
+  if (btnLight) btnLight.classList.toggle('theme-btn-mobile--active', isLight);
+  if (btnDark)  btnDark.classList.toggle('theme-btn-mobile--active', !isLight);
+}
+
+const btnMobileLight = document.getElementById('themeToggleMobileLight');
+const btnMobileDark  = document.getElementById('themeToggleMobileDark');
+if (btnMobileLight) btnMobileLight.addEventListener('click', () => setTheme(true));
+if (btnMobileDark)  btnMobileDark.addEventListener('click',  () => setTheme(false));
+updateThemeBtnsMobile();
+
 /* ─── Nav Scroll State ───────────────────────────────────────────────────── */
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', scrollY > 40);
@@ -353,15 +389,14 @@ if (window.matchMedia('(hover: none)').matches) {
 (function () {
   const rand = (min, max) => min + Math.random() * (max - min);
 
-  // Color endpoints: accent green ↔ near-white
-  const C_GREEN = [10, 149, 120];
-  const C_WHITE = [235, 235, 233];
-
   function lerp(a, b, t) {
     return Math.round(a + (b - a) * t);
   }
   function blendColor(t) {
-    return `rgb(${lerp(C_GREEN[0], C_WHITE[0], t)},${lerp(C_GREEN[1], C_WHITE[1], t)},${lerp(C_GREEN[2], C_WHITE[2], t)})`;
+    const light = document.documentElement.classList.contains('theme-light');
+    const lo = light ? [104, 133, 87]  : [45, 196, 160];
+    const hi = light ? [160, 185, 138] : [180, 230, 220];
+    return `rgb(${lerp(lo[0],hi[0],t)},${lerp(lo[1],hi[1],t)},${lerp(lo[2],hi[2],t)})`;
   }
 
   function animateWord(w) {
